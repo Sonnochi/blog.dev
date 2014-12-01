@@ -18,17 +18,20 @@ Route::get('/', function()
 
 Route::get('say-hello', function()
 {
-    return "Hello CodeUp!";
+    return View::make('say-hello')->with('name', 'CodeUp');
 });
 
 Route::get('say-hello/{name}', function($name)
 {
-    if ($name == 'John')
-    {
-        return Redirect::to('/');
-    } else {
-    return "Hello $name";
-    };
+    $age = 28;
+    $data = [
+        'name' => $name,
+];
+// lines 31-33 all do the same thing for lines 26-29
+    return View::make('say-hello')->with($data);
+    return View::make('say-hello')->with('name', $name)->with('age', $age);
+    return View::make('say-hello', $data);
+
 });
 
 Route::get('resume', function()

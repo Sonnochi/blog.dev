@@ -20,3 +20,11 @@ Route::get('resume', 'HomeController@resume');
 Route::get('portfolio', 'HomeController@portfolio');
 
 Route::resource('posts', 'PostsController');
+
+Route::get('orm-test', function ()
+{
+    $post = Post::find(1);
+    $post->title = "New Title Goes Here.";
+    $post->save();
+    return $post;
+});

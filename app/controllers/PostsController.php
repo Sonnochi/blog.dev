@@ -9,7 +9,8 @@ class PostsController extends \BaseController {
 	 */
 	public function index()
 	{
-		return 'this is the function for index.';
+		$posts = Post::all();
+		return View::make('posts.index')->with('posts', $posts);
 	}
 
 
@@ -20,7 +21,7 @@ class PostsController extends \BaseController {
 	 */
 	public function create()
 	{
-		return 'this is the function for create.';
+		return View::make('post.create');
 	}
 
 
@@ -31,7 +32,17 @@ class PostsController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		$post = new Post();
+		if(Input::has('title') && Input::has('body'))
+		{
+		$post = new Post();
+        $post->title = Input::get('title');
+        $post->body = Input::get('body');
+        $post->save();
+        
+        return Redirect::action('PostsController@show', $post->id);
+    	} 
+    	return 'Try again';
 	}
 
 
@@ -43,7 +54,8 @@ class PostsController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		return 'this is the show funtion for $id';
+		$post = Post::find($id);
+		return View::make('post.show')->with('post', $post);
 	}
 
 

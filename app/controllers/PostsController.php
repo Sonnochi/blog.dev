@@ -1,6 +1,13 @@
 <?php
 
 class PostsController extends \BaseController {
+	
+	public function __construct()
+	{
+		parent::__construct();
+		
+		$this->beforeFilter('auth', array('except' => array('index', 'show')));
+	}
 
 	/**
 	 * Display a listing of the posts.
@@ -32,22 +39,10 @@ class PostsController extends \BaseController {
 	 */
 	public function store()
 	{
-		// create the validator
-    	$validator = Validator::make(Input::all(), Post::$rules);
-    	
-    	if($validator->fails()) {
-    		
-		return Redirect::back()->withInput()->withErrors($validator);
-		
-    	} else {
 		$post = new Post();
-        $post->title = Input::get('title');
-        $post->body = Input::get('body');
         
-        $post->save();
-        
-        return Redirect::action('PostsController@show', $post->id);
-    	} 
+        return $this->savePost($post);
+
 	}
 
 
@@ -59,7 +54,14 @@ class PostsController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		$post = Post::find($id);
+		try{
+			
+		$post = Post::findOrFail($id);
+		
+		} catch(Exception $e) {
+			App::abort(404);
+		}
+		
 		return View::make('post.show')->with('post', $post);
 	}
 
@@ -88,12 +90,7 @@ class PostsController extends \BaseController {
 	{
 		$post = Post::find($id);
 		
-		$post->title = Input::get('tile');
-		$post->body = Input::get('body');
-		
-		$post->save();
-		
-		return Redirect::back();
+		return $this->savePost();
 	}
 
 
@@ -105,7 +102,30 @@ class PostsController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$post = Post::findOrFail($id);
+		
+		$post->delete();
+		
+		return Redirect::action('PostsController@index');
+	}
+	
+	protected function savePost(Post $post)
+	{
+		$validator = Validator::make(Input::all(), Post::$rules);
+		
+		if ($validator->fails()){
+			Log::error('Failed to save post!', Input::all());
+			
+			return Redirect::back()->withInput()->withErrors($validator);
+		}
+		
+		$post->title = Input::get('title');
+		$post->body = Input::get('body');
+		$post->save();
+		
+		Session::flash('successMessage', 'Post saved successfully!');
+		
+		return Redirect::action('PostsController@show', $post->id);
 	}
 
 

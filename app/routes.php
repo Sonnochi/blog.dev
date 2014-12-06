@@ -19,12 +19,8 @@ Route::get('roll-dice/{guess}', 'HomeController@rollDice');
 Route::get('resume', 'HomeController@resume');
 Route::get('portfolio', 'HomeController@portfolio');
 
-Route::resource('posts', 'PostsController');
+Route::get('login', 'HomeController@showLogin');
+Route::post('login', 'HomeController@doLogin');
+Route::get('logout', 'HomeController@doLogout');
 
-Route::get('orm-test', function ()
-{
-    $post = Post::find(1);
-    $post->title = "New Title Goes Here.";
-    $post->save();
-    return $post;
-});
+Route::resource('posts', 'PostsController');

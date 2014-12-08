@@ -16,7 +16,7 @@ class PostsController extends \BaseController {
 	 */
 	public function index()
 	{
-		$posts = Post::paginate(2);
+		$posts = Post::with('user')->paginate(5);
 		return View::make('post.index')->with('posts', $posts);
 	}
 

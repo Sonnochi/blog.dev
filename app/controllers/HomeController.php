@@ -40,6 +40,11 @@ class HomeController extends BaseController {
 	    return View::make('roll-dice', $data);
 	}
 	
+	public function welcome()
+	{
+		return View::make('welcome');
+	}
+	
 	public function resume()
 	{
 		return View::make('resume');

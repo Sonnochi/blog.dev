@@ -118,14 +118,14 @@ class PostsController extends \BaseController {
 			
 			return Redirect::back()->withInput()->withErrors($validator);
 		}
-		
+		$post->user_id = Auth::id(); 
 		$post->title = Input::get('title');
 		$post->body = Input::get('body');
 		$post->save();
 		
 		Session::flash('successMessage', 'Post saved successfully!');
 		
-		return Redirect::action('PostsController@show', $post->id);
+		return Redirect::action('PostsController@index', $post->id);
 	}
 
 

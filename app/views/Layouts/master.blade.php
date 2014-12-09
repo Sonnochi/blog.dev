@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<style type="text/css">
-    body
-    {
-        padding-top: 60px; 
-    }
-</style>
-
     <title>Laravel Blog</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    @yield('topscript')
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+        <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -23,14 +17,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="#">J. Farmer</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li class="active"><a href="{{ action('HomeController@welcome') }}">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="{{ action('PostsController@index') }}"></a>Posts</li>
+            <li><a href="{{ action('PostsController@index') }}">Posts</a></li>
             
             @if (Auth::check()) 
                 <li><a href="{{ action('PostsController@create') }}">Create New Post</a></li>

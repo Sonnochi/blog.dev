@@ -9,7 +9,7 @@
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
+    <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -23,7 +23,7 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="{{ action('HomeController@welcome') }}">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="{{ action('HomeController@slash') }}">Slash-A-Pseudoroid</a></li>
             <li><a href="{{ action('PostsController@index') }}">Posts</a></li>
             
             @if (Auth::check()) 
@@ -32,6 +32,7 @@
             
             <li><a href="{{ action('HomeController@portfolio') }}">Portfolio</a></li>
             <li><a href="{{ action('HomeController@resume') }}">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
                 @if (Auth::guest())
@@ -41,8 +42,8 @@
                 @endif
           </ul>
         </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+    </div>
+</nav>
     
     <div class="container">
         @if (Session::has('successMessage'))

@@ -10,7 +10,7 @@
           </ol>
           <div class="carousel-inner" role="listbox">
             <div class="item active">
-              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+              <img src="/images/unsplash_52a1c2d7d6f4f_1.jpeg" alt="First slide">
               <div class="container">
                 <div class="carousel-caption">
                   <h1>Example headline.</h1>
@@ -20,7 +20,7 @@
               </div>
             </div>
             <div class="item">
-              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAGZmZgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+              <img src="/images/photo-1415226481302-c40f24f4d45e.jpeg" alt="Second slide">
               <div class="container">
                 <div class="carousel-caption">
                   <h1>Another example headline.</h1>
@@ -30,11 +30,11 @@
               </div>
             </div>
             <div class="item">
-              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAFVVVQAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+              <img src="/images/418236.jpg" alt="Third slide">
               <div class="container">
                 <div class="carousel-caption">
-                  <h1>One more for good measure.</h1>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                  <h1>Slash-A-Pseudoroid</h1>
+                  <p>Pseudorois are among us! Help Megaman destroy them.</p>
                   <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
                 </div>
               </div>
@@ -55,20 +55,20 @@
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-          <h2>Heading</h2>
+          <img class="img-rounded" src="/images/xy-animated-gifs/pichu.gif" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <h2>Test</h2>
           <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
           <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-          <h2>Heading</h2>
+          <img class="img-rounded" src="/images/xy-animated-gifs/pikachu.gif" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <h2>About</h2>
           <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
           <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-          <h2>Heading</h2>
+          <img class="img-rounded" src="/images/xy-animated-gifs/raichu.gif" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <h2>More</h2>
           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
           <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
         </div><!-- /.col-lg-4 -->

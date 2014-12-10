@@ -26,3 +26,5 @@ Route::get('logout', 'HomeController@doLogout');
 Route::resource('posts', 'PostsController');
 
 Route::get('/', 'HomeController@welcome');
+
+Route::get('slash', 'HomeController@slash');

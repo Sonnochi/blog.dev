@@ -1,12 +1,13 @@
 @extends('layouts.master')
 
 @section('content')
-{{ Form::open(['action' => 'HomeController@doLogin']) }}
+<h1>Sign In</h1>
+    {{ Form::open(['action' => 'HomeController@doLogin']) }}
 
-{{ Form::email('email', null, ['class' => 'form-control', 'placeholder' => 'eMail']) }}
-{{ Form::password('password', ['class' => 'form-control', 'placeholder' => 'Password']) }}
+    {{ Form::email('email', null, ['class' => 'form-control', 'placeholder' => 'eMail']) }}
+    {{ Form::password('password', ['class' => 'form-control', 'placeholder' => 'Password']) }}
 
-{{ Form::submit('Log In')}}
+    {{ Form::submit('Log In')}}
 
-{{ Form::close() }}
+    {{ Form::close() }}
 @stop

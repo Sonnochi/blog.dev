@@ -28,3 +28,5 @@ Route::resource('posts', 'PostsController');
 Route::get('/', 'HomeController@welcome');
 
 Route::get('slash', 'HomeController@slash');
+
+Route::get('quiz', 'HomeController@quiz');

@@ -22,7 +22,7 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="{{ action('HomeController@welcome') }}">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="{{ action('HomeController@quiz')}}">Test Me</a></li>
             <li><a href="{{ action('HomeController@slash') }}">Slash-A-Pseudoroid</a></li>
             <li><a href="{{ action('PostsController@index') }}">Posts</a></li>
             

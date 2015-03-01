@@ -45,6 +45,11 @@ class HomeController extends BaseController {
 		return View::make('welcome');
 	}
 	
+	public function quiz()
+	{
+		return View::make('quiz');
+	}
+	
 	public function slash()
 	{
 		return View::make('slash');

@@ -15,7 +15,10 @@
                     <div class="question">
                         Which is not a main file type that we use to make websites?
                     </div>
-                    <input type="raido" name="question1" value="a"/>
+                    <input type="radio" name="question1" value="a"/>
+                    <label>.html</label><br>
+                    <input type="radio" name="question1" value="b"/>
+                    <label>.exe</label>
                 </div>
             </div>
             

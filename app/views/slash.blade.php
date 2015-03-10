@@ -119,7 +119,6 @@
                     $("#" + linkIdSplit[1]).trigger("play");
                 });
             });
-
         </script>
     </head>
     <body>

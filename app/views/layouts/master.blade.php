@@ -17,13 +17,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">J. Farmer</a>
+          <a class="navbar-brand">J. Farmer</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="{{ action('HomeController@welcome') }}">Home</a></li>
-            <li><a href="{{ action('HomeController@quiz')}}">Test Me</a></li>
             <li><a href="{{ action('HomeController@slash') }}">Slash-A-Pseudoroid</a></li>
+            <li><a href="{{ action('HomeController@quiz')}}">Test Me</a></li>
             <li><a href="{{ action('PostsController@index') }}">Posts</a></li>
             
             @if (Auth::check()) 
